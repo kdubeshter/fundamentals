@@ -1,6 +1,6 @@
 h1{
 	font-family: raleway;
-	color: #0D2C40;
+	color: white;
 	letter-spacing: 1px;
 	font-weight: 400;
 	font-size: 45px;
@@ -12,6 +12,8 @@ h2{
 	letter-spacing: 1px;
 	font-weight: 600;
 	font-size: 20px;
+	margin: 0;
+	border: white;
 }
 body {
 	text-align: center;
@@ -19,13 +21,17 @@ body {
 }
 a {
 	font-family: raleway;
-	color: #F15B31;
+	color: white;
 	letter-spacing: 1px;
 	font-weight: 600;
 	font-size: 40px;
 	margin: 20px;
+}
+
+a:hover {
 	border-bottom: 2px solid transparent;
 }
+
 p{
 	font-family: droid serif;
 	line-height: 26px;
@@ -87,6 +93,4 @@ font-size: 0;
 	font-weight: 700;
 }
 
-a:hover {
-	border: white;
-}
+

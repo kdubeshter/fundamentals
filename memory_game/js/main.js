@@ -27,15 +27,27 @@ var checkForMatch = function() {
 	}
 }
 
-var flipCard = function(cardId) {
-	console.log("User flipped " + cards[cardId].rank);
-	console.log(cards[cardId].cardImage);
-	console.log(cards[cardId].suit);
-	cardsInPlay.push(cards[cardId].rank);
+var flipCard = function() {
+	this.getAttribute('data-id');
+	this.setAttribute('src','cards.cardImage');
+	console.log("User flipped " + cards.rank);
+	console.log(cards.cardImage);
+	console.log(cards.suit);
+	cardsInPlay.push(cards.rank);
 if (cardsInPlay.length === 2) {
 	checkForMatch();
 }
 }
+var createBoard = function() {
 
-flipCard(0);
-flipCard(2);
+	for (var i = 0; i < cards.length; i++) {
+    var cardElement = document.createElement('img');
+    cardElement.setAttribute('src','images/back.png');
+    cardElement.setAttribute('data-id',i);
+    cardElement.addEventListener('click',flipCard);
+    document.getElementById('game-board').appendChild(cardElement);
+}
+}
+
+
+createBoard();
